@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "interface",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["serve.py"],
+      "port": 8123,
+      "autoPort": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Normalize line endings; binaries are auto-detected
+* text=auto
+*.png binary

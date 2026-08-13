@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bonding Analysis Explorer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand">
+        <span class="brand-mark">⬡</span>
+        <span class="brand-name">Bonding Analysis Explorer</span>
+      </div>
+      <nav class="breadcrumb">
+        <span>Materials</span>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current" id="crumb-material">…</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="page" hidden>
+    <!-- Material title block -->
+    <section class="title-block">
+      <div>
+        <h1 id="material-formula" class="material-formula"></h1>
+        <p id="material-name" class="material-name"></p>
+      </div>
+      <div class="title-tags" id="title-tags"></div>
+    </section>
+
+    <!-- Structure viewer + info -->
+    <section class="structure-section">
+      <div class="card viewer-card">
+        <div class="card-header">
+          <h2>Crystal Structure</h2>
+          <div class="viewer-controls">
+            <label class="ctl">
+              Supercell
+              <select id="supercell-select">
+                <option value="1,1,1" selected>1×1×1</option>
+                <option value="2,2,1">2×2×1</option>
+                <option value="2,2,2">2×2×2</option>
+                <option value="3,3,1">3×3×1</option>
+              </select>
+            </label>
+            <label class="ctl chk"><input type="checkbox" id="toggle-bonds" checked /> Bonds</label>
+            <label class="ctl chk"><input type="checkbox" id="toggle-cell" checked /> Cell</label>
+            <label class="ctl chk"><input type="checkbox" id="toggle-labels" /> Labels</label>
+            <button id="reset-view" class="btn-small" title="Reset camera">Reset view</button>
+          </div>
+        </div>
+        <div class="viewer-wrap">
+          <div id="viewer"></div>
+          <div id="viewer-tooltip" class="viewer-tooltip" hidden></div>
+          <div class="viewer-legend" id="viewer-legend"></div>
+        </div>
+        <div class="viewer-status" id="viewer-status">
+          Drag to rotate · scroll to zoom · right-drag to pan · click atoms to measure distances
+        </div>
+      </div>
+
+      <div class="info-column">
+        <div class="card">
+          <div class="card-header"><h2>Structural Details</h2></div>
+          <table class="kv-table" id="details-table"></table>
+        </div>
+        <div class="card">
+          <div class="card-header"><h2>Atomic Sites</h2></div>
+          <table class="sites-table" id="sites-table"></table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonding analysis tabs -->
+    <section class="card analysis-card">
+      <div class="tab-bar" role="tablist" id="tab-bar">
+        <button class="tab active" role="tab" data-tab="elf">ELF</button>
+        <button class="tab" role="tab" data-tab="cohp">COOP / COHP</button>
+        <button class="tab" role="tab" data-tab="cogito">COGITO</button>
+        <button class="tab" role="tab" data-tab="wannier">Tight-Binding Wannier Model</button>
+      </div>
+      <div class="tab-panels" id="tab-panels"></div>
+    </section>
+  </main>
+
+  <div id="load-error" class="load-error" hidden></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "id": "BiOCl",
+  "name": "Bismuth oxychloride",
+  "formula": "BiOCl",
+  "description": "Layered matlockite-type oxyhalide. Bi3+ sits in an asymmetric coordination environment (4 O below, 4 Cl above) with a stereochemically active 6s2 lone pair pointing into the van der Waals gap between Cl layers.",
+  "spaceGroup": {
+    "symbol": "P4/nmm",
+    "number": 129,
+    "crystalSystem": "Tetragonal",
+    "pointGroup": "4/mmm"
+  },
+  "wyckoff": { "Bi": "2c", "Cl": "2c", "O": "2a" },
+  "sources": {
+    "structure": "POSCAR (VASP, direct coordinates)"
+  },
+  "cogito": {
+    "quality": {
+      "image": "cogito/orb_change.png",
+      "files": ["cogito/analysis.txt", "cogito/error_output.txt"]
+    },
+    "plots": [
+      {
+        "file": "cogito/bond_cohp_plot.html",
+        "title": "Bond-resolved COHP structure map",
+        "description": "Interactive 3D structure from COGITO: atoms carry COGITO charges (hover an atom, e.g. Bi +2.06, O −0.88, Cl −0.56); bonds carry the bond energy, bond length/neighbor shell, bond charge, and the orbital-pair breakdown of the bond energy (e.g. O s–Bi s, O p–Bi s…). Rotate, zoom, and hover directly in the figure — clicking a bond loads its COHP curve in the right-hand panel."
+      }
+    ]
+  },
+  "lobster": {
+    "cohp": "COHPCAR.lobster",
+    "coop": "COOPCAR.lobster",
+    "cobi": "COBICAR.lobster",
+    "icohp": "ICOHPLIST.lobster",
+    "icoop": "ICOOPLIST.lobster",
+    "icobi": "ICOBILIST.lobster",
+    "charge": "CHARGE.lobster",
+    "madelung": "MadelungEnergies.lobster",
+    "polarization": "POLARIZATION.lobster",
+    "lobsterout": "lobsterout"
+  },
+  "wannier": {
+    "hrFile": "BiOCl_hr.dat",
+    "dftBandsFile": "bands.dat",
+    "kpath": [
+      { "label": "Γ", "k": [0, 0, 0] },
+      { "label": "K", "k": [0.33333333, 0.33333333, 0] },
+      { "label": "X", "k": [0.5, 0, 0] },
+      { "label": "R", "k": [0.5, 0, 0.5] },
+      { "label": "Z", "k": [0, 0, 0.5] },
+      { "label": "Γ", "k": [0, 0, 0] }
+    ],
+    "pointsPerSegment": 20,
+    "kpathNote": "Path verified against bands.dat (RMS < 1 meV per k-point). \"K\" = (⅓,⅓,0), a point on the Γ–M diagonal of the tetragonal BZ (hexagonal-template path).",
+    "filledBands": 14,
+    "basis": [
+      { "site": "Bi1", "element": "Bi", "orbitals": ["sp³₁", "sp³₂", "sp³₃", "sp³₄"] },
+      { "site": "Bi2", "element": "Bi", "orbitals": ["sp³₁", "sp³₂", "sp³₃", "sp³₄"] },
+      { "site": "O1", "element": "O", "orbitals": ["p₁", "p₂", "p₃"] },
+      { "site": "O2", "element": "O", "orbitals": ["p₁", "p₂", "p₃"] },
+      { "site": "Cl1", "element": "Cl", "orbitals": ["p₁", "p₂", "p₃"] },
+      { "site": "Cl2", "element": "Cl", "orbitals": ["p₁", "p₂", "p₃"] }
+    ]
+  }
+}

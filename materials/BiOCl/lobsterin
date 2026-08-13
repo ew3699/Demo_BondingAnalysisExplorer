@@ -1,0 +1,17 @@
+!Energetic Window in eV relative to the Fermi Level
+COHPstartEnergy -20
+COHPendEnergy 5
+
+usebasisset pbeVaspFit2015 
+
+!The valence orbitals to be used
+basisFunctions Bi 6s 6p 5d
+basisFunctions O 2p 2s
+basisFunctions Cl 3p 3s
+
+!Pairs for the COHP Analysis (numbered atoms as in the POSCAR)
+!cohpbetween atom x and atom y
+ cohpGenerator from 0.5 to 3.7 type Cl type Cl
+ cohpGenerator from 0.5 to 3.5 type Bi type O
+ cohpGenerator from 0.5 to 3.5 type Bi type Cl
+

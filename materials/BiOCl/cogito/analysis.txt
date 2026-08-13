@@ -1,0 +1,4 @@
+Saved the orbital change figure.
+The orbital convergence is within expected range!
+The band spillage and orbital mixing is within expected range!
+DFT band error analysis failed. Check that (dir+'DFT_band_error'+tag+'.txt') exists.

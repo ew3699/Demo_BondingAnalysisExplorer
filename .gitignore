@@ -1,0 +1,8 @@
+# OS / editor clutter
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
