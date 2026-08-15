@@ -1,6 +1,7 @@
 # Bonding Analysis Explorer
+Demonstration of a hypothetical interactive bonding analysis interface for ELF, COOP/COHP, COGITO, tight-binding Wannier model on a BiOCl test case. 
 
-Interactive bonding analysis interface for ELF, COOP/COHP, COGITO, tight-binding Wannier model on a BiOCl test case.
+Demonstration for the purposes of the Independent Proposal.
 
 ## To run!
 Download this repository. 
