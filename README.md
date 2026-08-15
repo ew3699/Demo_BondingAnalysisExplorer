@@ -1,15 +1,15 @@
 # Bonding Analysis Explorer
 
-Interactive bonding analysis interface (ELF, COOP/COHP, COGITO, tight-binding Wannier model).
-Test case: BiOCl. Plain static web app — no build step, no installation beyond Python.
+Interactive bonding analysis interface for ELF, COOP/COHP, COGITO, tight-binding Wannier model on a BiOCl test case.
 
-## Run it
+## To run!
+Download this repository. 
 
-**Windows:** double-click `Start Interface.bat`. It starts a local web server and opens
+For **Windows:** double-click `Start Interface.bat`. It starts a local web server and opens
 http://localhost:8123 in your default browser. Keep the console window open while using
 the app; close it to stop the server.
 
-**Mac/Linux (or manually):** from this folder run
+For **Mac/Linux (or manually):** from this folder run: 
 
 ```bash
 python3 serve.py
@@ -25,12 +25,6 @@ Notes:
 - An internet connection is needed the first time (three.js and Plotly load from a CDN).
 - Opening `index.html` directly as a file will NOT work — the app must be served over
   HTTP (ES modules + data fetching).
-
-## Sharing
-
-Zip this whole folder and send it; the recipient follows the same steps above.
-Alternatively, host it on any static web host (GitHub Pages, Netlify, a group web server) —
-upload the folder as-is and it works, no server-side code required.
 
 ## Layout
 
