@@ -1,7 +1,7 @@
 # Bonding Analysis Explorer
 Demonstration of a hypothetical interactive bonding analysis interface for ELF, COOP/COHP, COGITO, tight-binding Wannier model on a BiOCl test case. 
 
-Demonstration for the purposes of the Independent Proposal.
+Demonstration for the purposes of the Independent Proposal -- created by Emily Ward (with the assistance of Claude Code) August 10th, 2026. 
 
 ## To run!
 Download this repository. 
